@@ -6,7 +6,7 @@ public class Calculator {
 
 	public static void main(String[] args) {
 
-			Scanner sc = new Scanner(System.in);  
+			try(Scanner sc = new Scanner(System.in)) {
 		     
 			System.out.println("Unesite prvi broj");  
 			int x = sc.nextInt(); 
@@ -19,27 +19,21 @@ public class Calculator {
 			
 			int z = 0;
 			
-			if(op.equals("+"))
-			{
+			if(op.equals("+")){
 				z = x + y;
-			}
-			else if(op.equals("-"))
-			{
+			}else if(op.equals("-")){
 				z = x - y;
-			}
-			else if(op.equals("*"))
-			{
+			}else if(op.equals("*")){
 				z = x * y;
-			}
-			else if(op.equals("/"))
-			{
+			}else if(op.equals("/")){
 				z = x / y ;
 			}			
 			
 			System.out.println("Prvi broj je " + x);
 			System.out.println("Drugi broj je " + y);
 			System.out.println("Rezultat operacije je: " + z);
-
+		
+		}
 	}
 	
 }
