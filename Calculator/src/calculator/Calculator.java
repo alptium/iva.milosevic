@@ -2,41 +2,40 @@ package calculator;
 
 import java.util.Scanner;
 
-public class Calculator {
+public class Main {
 
 	public static void main(String[] args) {
 		
-			int x;
-			int y;
-			int z;
+		int x;
+		int y;
+		int z;
 
-			try(Scanner sc = new Scanner(System.in)) {
+		try(Scanner sc = new Scanner(System.in)) {
 		     
-			System.out.println("Unesite prvi broj");  
+			System.out.println("Enter your first number");  
 			x = sc.nextInt(); 
 			
-			System.out.println("Izaberite operaciju +, -, *, / ");  
+			System.out.println("Choose the operation +, -, *, / ");  
 			String op = sc.next(); 
 			
-			System.out.println("Unesite drugi broj");  
+			System.out.println("Enter your second number");  
 			y = sc.nextInt(); 
 			
 	        z = 0;
 			
-			if(op.equals("+")){
+			if(op.equals("+")) {
 				z = x + y;
-			}else if(op.equals("-")){
+			} else if(op.equals("-")) {
 				z = x - y;
-			}else if(op.equals("*")){
+			} else if(op.equals("*")) {
 				z = x * y;
-			}else if(op.equals("/")){
+			} else if(op.equals("/")) {
 				z = x / y ;
 			}			
 			
-			System.out.println("Prvi broj je " + x);
-			System.out.println("Drugi broj je " + y);
-			System.out.println("Rezultat operacije je: " + z);
-		
+			System.out.println("First number is: " + x);
+			System.out.println("Second number is: " + y);
+			System.out.println("The result of operaton is: " + z);
 		}
 	}
 	
