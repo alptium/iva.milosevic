@@ -21,7 +21,7 @@ public class Main {
 			System.out.println("Enter your second number");  
 			y = sc.nextInt(); 
 			
-	        z = 0;
+	        	z = 0;
 			
 			if(op.equals("+")) {
 				z = x + y;
@@ -37,6 +37,5 @@ public class Main {
 			System.out.println("Second number is: " + y);
 			System.out.println("The result of operaton is: " + z);
 		}
-	}
-	
+	}	
 }
