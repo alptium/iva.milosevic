@@ -2,7 +2,7 @@ package gradebook;
 
 import java.util.Scanner;
 
-public class Gradebook {
+public class Main {
 
 	public static void main(String[] args) {
 		
@@ -25,31 +25,28 @@ public class Gradebook {
 		
 		try(Scanner sc = new Scanner(System.in)) {
 		
-		System.out.println("Enter Grade, Students Name and Surname");
-		grade1 = sc.nextInt();
-		student1 = sc.next();
+			System.out.println("Enter Grade, Students Name and Surname");
+			grade1 = sc.nextInt();
+			student1 = sc.next();
 		
-		System.out.println("Enter Grade, Students Name and Surname");
-		grade2 = sc.nextInt();
-		student2 = sc.next();
+			System.out.println("Enter Grade, Students Name and Surname");
+			grade2 = sc.nextInt();
+			student2 = sc.next();
 		
-		System.out.println("Enter Grade, Students Name and Surname");
-		grade3 = sc.nextInt();
-		student3 = sc.next();
+			System.out.println("Enter Grade, Students Name and Surname");
+			grade3 = sc.nextInt();
+			student3 = sc.next();
 		
-		System.out.println("Enter Grade, Students Name and Surname");
-		grade4 = sc.nextInt();
-		student4 = sc.next();
+			System.out.println("Enter Grade, Students Name and Surname");
+			grade4 = sc.nextInt();
+			student4 = sc.next();
 		
-		System.out.println("Enter Grade, Students Name and Surname");
-		grade5 = sc.nextInt();
-		student5 = sc.next();
+			System.out.println("Enter Grade, Students Name and Surname");
+			grade5 = sc.nextInt();
+			student5 = sc.next();
 		
-		totalGrade = (grade1 + grade2 + grade3 + grade4 + grade5) / 5 ;
-		System.out.println("Prosek je :" + totalGrade);
-		
+			totalGrade = (grade1 + grade2 + grade3 + grade4 + grade5) / 5 ;
+			System.out.println("Prosek je :" + totalGrade);
 		}
-	
 	}
-
 }
