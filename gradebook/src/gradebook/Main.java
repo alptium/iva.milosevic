@@ -25,14 +25,12 @@ public class Main {
 			System.out.println("Enter Student's Grade");
 			double grade2 = sc.nextDouble();
 			
-			
 			System.out.println("Enter Student's No.3 Name");
 			String student3name = sc.next();
 			System.out.println("Enter Student's Surname");
 			String student3surname = sc.next();
 			System.out.println("Enter Student's Grade");
 			double grade3 = sc.nextDouble();
-			
 			
 			System.out.println("Enter Student's No.4 Name");
 			String student4name = sc.next();
