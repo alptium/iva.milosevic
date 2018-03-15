@@ -15,9 +15,8 @@ public class Main {
 		System.out.println();
 		
 		runCandidate();
-		
 	}
-		public static void runCandidate() {
+	public static void runCandidate() {
 		
 		ArrayList<Candidate> candidate = new ArrayList<>();
 		
@@ -33,7 +32,7 @@ public class Main {
 			String surname = sc.next();
 			
 			System.out.println("Enter your birth year");
-		    int birthYear = sc.nextInt();
+		    	int birthYear = sc.nextInt();
 			
 			System.out.println("Enter your previous sport club");
 			String sportClub = sc.next();
@@ -72,7 +71,7 @@ public class Main {
 			int height = sc.nextInt();
 			
 			System.out.println("Enter your Weight");
-		    int weight = sc.nextInt();
+		    	int weight = sc.nextInt();
 			
 			System.out.println("Enter your Points");
 			double points = sc.nextDouble();
@@ -80,14 +79,12 @@ public class Main {
 			System.out.println("Enter your Assistance");
 			double assistance = sc.nextDouble();
 			
-			
+			Candidate candidates = new Candidate ( jmbg, name, surname, birthYear, height, weight, healthIssue, acctiveYears, position, points, assistance, contract, scholarship);
 			
 			if (birthYear > 14 && acctiveYears >= 3 && height >= 170 && weight >= 50 && points >= 30 && assistance >= 20 ) {
 				System.out.println("Congratulations, you have passed the conditions of competition!");
-			}
+			} else
 				System.out.println("Unfortunately, you are not pass the conditions of competition.");
-			
-				Candidate candidates = new Candidate ( jmbg, name, surname, birthYear, height, weight, healthIssue, acctiveYears, position, points, assistance, contract, scholarship);
 			
 		}
 	}
