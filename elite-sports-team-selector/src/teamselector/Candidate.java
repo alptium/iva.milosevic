@@ -1,11 +1,12 @@
-package elitesports;
+package teamselector;
 
 public class Candidate {
-	
 	private long jmbg;
 	private String name;
 	private String surname;
 	private int birthYear;
+	private String sportClub;
+	private String awards;
 	private int height;
 	private int weight;
 	private String healthIssue;
@@ -16,15 +17,17 @@ public class Candidate {
 	private String contract;
 	private String scholarship;
 	
-	public Candidate(long jmbg, String name, String surname, int birthYear, int height, int weight, String healthIssue, int activeYears, String position, double points, double assistance, String contract, String scholarship) {
+	public Candidate(long jmbg, String name, String surname, int birthYear, String sportClub, String awards, int height, int weight, String healthIssue, int activeYears, String position, double points, double assistance, String contract, String scholarship) {
 		this.jmbg =jmbg;
 		this.name = name;
 		this.surname = surname;
 		this.birthYear = birthYear;
+		this.sportClub = sportClub;
+		this.awards = awards;
 		this.height = height;
 		this.weight = weight; 
 		this.healthIssue = healthIssue;
-		this.acctiveYears = acctiveYears;
+		this.activeYears = activeYears;
 		this.position = position;
 		this.points = points;
 		this.assistance = assistance;
@@ -46,6 +49,14 @@ public class Candidate {
 
 	public int getBirthYear() {
 		return birthYear;
+	}
+	
+	public String getSportClub() {
+		return sportClub;
+	}
+	
+	public String getAwards() {
+		return awards;
 	}
 
 	public int getHeight() {
@@ -83,5 +94,3 @@ public class Candidate {
 		return scholarship;
 	}
 }
-
-

@@ -1,6 +1,5 @@
-package elitesports;
+package teamselector;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -17,8 +16,6 @@ public class Main {
 		runCandidate();
 	}
 	public static void runCandidate() {
-		
-		ArrayList<Candidate> candidate = new ArrayList<>();
 		
 		try(Scanner sc = new Scanner(System.in)) { 
 			
@@ -79,14 +76,36 @@ public class Main {
 			System.out.println("Enter your Assistance");
 			double assistance = sc.nextDouble();
 			
-			Candidate candidate = new Candidate (jmbg, name, surname, birthYear, height, weight, healthIssue, activeYears, position, points, assistance, contract, scholarship);
+			Candidate candidate = new Candidate (jmbg, name, surname, birthYear, sportClub, awards, height, weight, healthIssue, activeYears, position, points, assistance, contract, scholarship);
+			System.out.println("These are your answers: ");
+			System.out.println("Name: " + candidate.getName());
+			System.out.println("Surname: " + candidate.getSurname());
+			System.out.println("Birth Year: " + candidate.getBirthYear());
+			System.out.println("Previous Sport Club: " + candidate.getSportClub());
+			System.out.println("Awards: " + candidate.getAwards());
+			System.out.println("Contracts: " + candidate.getContract());
+			System.out.println("Health Issues: " + candidate.getHealthIssue());
+			System.out.println("Scholarships: " + candidate.getScholarship());
+			System.out.println("Active Years : " + candidate.getActiveYears());
+			System.out.println("Position: " + candidate.getPosition());
+			System.out.println("Your Height: " + candidate.getHeight());
+			System.out.println("Weight: " + candidate.getWeight());
+			System.out.println("Points: " + candidate.getPoints());
+			System.out.println("Assistences: " + candidate.getAssistance());
 			
-		
 			if (birthYear > 14 && activeYears >= 3 && height >= 170 && weight >= 50 && points >= 30 && assistance >= 20 ) {
-				System.out.println("Congratulations, you have passed the conditions of competition!");
+				System.out.println("Congratulations, you have passed the conditions of selection!");
 			} else
-				System.out.println("Unfortunately, you are not pass the conditions of competition.");
-			
+				System.out.println("Unfortunately, you are not pass the conditions of selection.");
+		
+				System.out.println("Do you want to add new candidate?  Yes/ No");
+				String enter = sc.next().substring(0, 1);
+				if (enter.equalsIgnoreCase("y")) {
+					runCandidate();
+				} else if (enter.equalsIgnoreCase("n")) {
+					return;
+				}
 		}
 	}
 }
+
