@@ -95,9 +95,9 @@ public class Main {
 			
 			if (birthYear > 14 && activeYears >= 3 && height >= 170 && weight >= 50 && points >= 30 && assistance >= 20 ) {
 				System.out.println("Congratulations, you have passed the conditions of selection!");
-			} else
+			} else {
 				System.out.println("Unfortunately, you are not pass the conditions of selection.");
-		
+				System.out.println();
 				System.out.println("Do you want to add new candidate?  Yes/ No");
 				String enter = sc.next().substring(0, 1);
 				if (enter.equalsIgnoreCase("y")) {
@@ -105,6 +105,8 @@ public class Main {
 				} else if (enter.equalsIgnoreCase("n")) {
 					return;
 				}
+			
+			}
 		}
 	}
 }
